@@ -1,0 +1,107 @@
+------- Vanilla training
+Before loading anything. GPU memory occupied: 270 MB.
+After loading a tiny tenor. GPU memory occupied: 1048 MB.
+After loading the model. GPU memory occupied: 2338 MB.
+{'train_runtime': 50.1114, 'train_samples_per_second': 10.217, 'train_steps_per_second': 1.277, 'train_loss': 0.026648884639143944, 'epoch': 1.0}
+Time: 50.11
+Samples/second: 10.22
+ GPU memory occupied: 5256 MB.
+ 
+------- Using gradient accumulation
+Before loading anything. GPU memory occupied: 271 MB.
+After loading a tiny tenor. GPU memory occupied: 1049 MB.
+After loading the model. GPU memory occupied: 2339 MB.
+{'train_runtime': 52.4902, 'train_samples_per_second': 9.754, 'train_steps_per_second': 0.305, 'train_loss': 0.17699900269508362, 'epoch': 1.0}
+Time: 52.49
+Samples/second: 9.75
+ GPU memory occupied: 5257 MB.
+Before loading anything. GPU memory occupied: 270 MB.
+After loading a tiny tenor. GPU memory occupied: 1048 MB.
+After loading the model. GPU memory occupied: 2338 MB.
+
+------- Using gradient accumulation and checkpoint
+{'train_runtime': 66.3008, 'train_samples_per_second': 7.722, 'train_steps_per_second': 0.241, 'train_loss': 0.3252817988395691, 'epoch': 1.0}
+Time: 66.30
+Samples/second: 7.72
+ GPU memory occupied: 5580 MB.
+Before loading anything. GPU memory occupied: 270 MB.
+After loading a tiny tenor. GPU memory occupied: 1048 MB.
+After loading the model. GPU memory occupied: 2338 MB.
+
+------- Using mix precision training
+{'train_runtime': 22.5794, 'train_samples_per_second': 22.676, 'train_steps_per_second': 2.834, 'train_loss': 0.043404411524534225, 'epoch': 1.0}
+Time: 22.58
+Samples/second: 22.68
+ GPU memory occupied: 6160 MB.
+Before loading anything. GPU memory occupied: 270 MB.
+After loading a tiny tenor. GPU memory occupied: 1048 MB.
+After loading the model. GPU memory occupied: 2338 MB.
+
+------- Using gradient accmulation, checkpoint and mix precision training
+{'train_runtime': 25.5116, 'train_samples_per_second': 20.069, 'train_steps_per_second': 0.627, 'train_loss': 0.43717747926712036, 'epoch': 1.0}
+Time: 25.51
+Samples/second: 20.07
+ GPU memory occupied: 5948 MB.
+
+------- Using bits and bytes 
+===================================BUG REPORT===================================
+Welcome to bitsandbytes. For bug reports, please run
+
+python -m bitsandbytes
+
+ and submit this information together with your error trace to: https://github.com/TimDettmers/bitsandbytes/issues
+================================================================================
+bin /scratch/work/lunt1/.conda_envs/test_env/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cuda118_nocublaslt.so
+CUDA SETUP: CUDA runtime path found: /scratch/work/lunt1/.conda_envs/test_env/lib/libcudart.so
+CUDA SETUP: Highest compute capability among GPUs detected: 7.0
+CUDA SETUP: Detected CUDA version 118
+CUDA SETUP: Loading binary /scratch/work/lunt1/.conda_envs/test_env/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cuda118_nocublaslt.so...
+Before loading anything. GPU memory occupied: 270 MB.
+After loading a tiny tenor. GPU memory occupied: 1016 MB.
+After loading the model. GPU memory occupied: 2306 MB.
+{'train_runtime': 65.2029, 'train_samples_per_second': 7.852, 'train_steps_per_second': 1.963, 'train_loss': 0.41185635328292847, 'epoch': 1.0}
+Time: 65.20
+Samples/second: 7.85
+ GPU memory occupied: 4560 MB.
+
+===================================BUG REPORT===================================
+Welcome to bitsandbytes. For bug reports, please run
+
+python -m bitsandbytes
+
+ and submit this information together with your error trace to: https://github.com/TimDettmers/bitsandbytes/issues
+================================================================================
+bin /scratch/work/lunt1/.conda_envs/test_env/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cuda118_nocublaslt.so
+CUDA SETUP: CUDA runtime path found: /scratch/work/lunt1/.conda_envs/test_env/lib/libcudart.so.11.0
+CUDA SETUP: Highest compute capability among GPUs detected: 7.0
+CUDA SETUP: Detected CUDA version 118
+CUDA SETUP: Loading binary /scratch/work/lunt1/.conda_envs/test_env/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cuda118_nocublaslt.so...
+Before loading anything. GPU memory occupied: 271 MB.
+After loading a tiny tenor. GPU memory occupied: 1017 MB.
+After loading the model. GPU memory occupied: 2307 MB.
+
+------- Using bits and bytes along with other settings
+{'train_runtime': 50.295, 'train_samples_per_second': 10.18, 'train_steps_per_second': 2.545, 'train_loss': 3.02128529548645, 'epoch': 1.0}
+Time: 50.30
+Samples/second: 10.18
+ GPU memory occupied: 4453 MB.
+
+
+===================================BUG REPORT===================================
+Welcome to bitsandbytes. For bug reports, please run
+
+python -m bitsandbytes
+
+ and submit this information together with your error trace to: https://github.com/TimDettmers/bitsandbytes/issues
+================================================================================
+bin /scratch/work/lunt1/.conda_envs/test_env/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cuda118_nocublaslt.so
+CUDA SETUP: CUDA runtime path found: /scratch/work/lunt1/.conda_envs/test_env/lib/libcudart.so
+CUDA SETUP: Highest compute capability among GPUs detected: 6.0
+CUDA SETUP: Detected CUDA version 118
+CUDA SETUP: Loading binary /scratch/work/lunt1/.conda_envs/test_env/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cuda118_nocublaslt.so...
+Before loading anything. GPU memory occupied: 110 MB.
+After loading a tiny tenor. GPU memory occupied: 696 MB.
+After loading the model. GPU memory occupied: 1986 MB.
+
+------- Using bits and bytes AND accelerate, along with other settings
+ GPU memory occupied: 4012 MB.
